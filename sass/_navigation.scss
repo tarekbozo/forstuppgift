@@ -1,0 +1,136 @@
+.navigation {
+  @media screen and (max-width: 48rem) {
+    position: relative;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 6rem;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+
+    @media screen and (max-width: 48rem) {
+      width: 100%;
+    }
+  }
+  &__logo {
+    color: $color-grey-light-1;
+    justify-self: center;
+    margin-left: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column: 8/-1;
+    justify-self: center;
+    list-style: none;
+    margin-right: 3rem;
+
+    @media screen and (max-width: 48rem) {
+      display: grid;
+      grid-template-columns: auto;
+      background-color: $color-secondary;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: 6rem;
+
+      left: -100%;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  &__link {
+    color: $color-grey-light-1;
+    text-decoration: none;
+    @media screen and (max-width: 48rem) {
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 6rem;
+      width: 100%;
+      display: table;
+    }
+  }
+  &__link:hover {
+    color: $color-primary;
+    transition: all 0.2s ease-out;
+    @media screen and (max-width: 48rem) {
+      background-color: $color-secondary;
+      color: $color-grey-light-1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  &__item {
+    text-align: center;
+    margin-right: 2rem;
+  }
+
+  &__link-btn {
+    background-color: rgba(241, 232, 232, 0.356);
+    color: white;
+    padding: 1rem 1.6rem;
+    border-radius: 1.6rem;
+    text-decoration: none;
+
+    @media screen and (max-width: 48rem) {
+      text-align: center;
+      line-height: 6rem;
+    }
+  }
+  &__link-btn:hover {
+    background-color: transparent;
+    color: $color-grey-light-1;
+    padding: 1rem 1.6rem;
+    border-radius: 1.6rem;
+    border: solid 0.1rem rgba(241, 232, 232, 0.356);
+    transition: all 0.3s;
+  }
+  &__menu-toggle {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translateY(5%, 30%);
+    &-bar {
+      width: 2.5rem;
+      height: 0.3rem;
+      margin: 0.5rem auto;
+      transition: all 0.3s ease-in-out;
+      background-color: $color-grey-light-1;
+      @media screen and (max-width: 48rem) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+  &__menu-toggle:hover {
+    cursor: pointer;
+  }
+}
+
+#mobile-menu.is-active .navigation__menu-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+#mobile-menu.is-active .navigation__menu-toggle-bar:nth-child(1) {
+  transform: translateY(0.8rem) rotate(45deg);
+}
+#mobile-menu.is-active .navigation__menu-toggle-bar:nth-child(3) {
+  transform: translateY(-0.8rem) rotate(-45deg);
+}
+
+// .active {
+//   left: 0;
+//   opacity: 1;
+//   transition: all 0.5s ease;
+// }
