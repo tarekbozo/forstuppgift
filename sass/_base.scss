@@ -29,20 +29,7 @@ html {
 
 body {
   font-family: $font-primary;
-  color: $color-grey-dark-2;
+  color: $color-grey-light-1;
   font-weight: 300;
   line-height: 1.6;
 }
-
-// .container {
-//   display: grid;
-//   grid-template-rows: 6rem 100vh;
-//   grid-template-columns:
-//     [full-start] minmax(6rem, 1fr)
-//     [center-start] repeat(
-//       8,
-//       [col-start] minmax(min-content, 14rem) minmax(6rem, 1fr) [col-end]
-//     )
-//     [center-end] minmax(6rem, 1fr)
-//     [full-end];
-// }
