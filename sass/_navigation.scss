@@ -41,7 +41,6 @@
       background-image: linear-gradient(145deg, #2a66c6 0%, #661b80 95%);
       margin: 0;
       width: 100%;
-      height: 100vh;
       position: absolute;
       top: 6rem;
       left: -100%;
@@ -81,7 +80,6 @@
     margin-right: 2rem;
     @media screen and (max-width: 48rem) {
       margin-right: 0;
-      line-height: 30;
     }
   }
 
